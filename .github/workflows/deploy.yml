@@ -35,7 +35,7 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_CONTAINER_REGISTRY: "sobrian.azurecr.io"
+  AZURE_CONTAINER_REGISTRY: "sobrian"
   CONTAINER_NAME: "cache-service"
   REGISTRY_RESOURCE_GROUP: "sobrian"
   AKS_RESOURCE_GROUP: "sobrian-k8s"
