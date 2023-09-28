@@ -8,11 +8,11 @@ WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
 
-COPY ./**/*.go ./
+COPY . .
 
 RUN ls -al
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o /cache-service
+RUN CGO_ENABLED=0 GOOS=linux go build -o /cache-service ./cmd/
 
 # Run the tests in the container
 FROM build-stage AS run-test-stage
