@@ -5,7 +5,7 @@ metadata:
   labels:
     app: cache-service
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: cache-service
@@ -31,7 +31,7 @@ spec:
     app: cache-service
   type: LoadBalancer
   ports:
-    - name: port80
+    - name: http
       protocol: TCP
       port: 80
       targetPort: 8080
